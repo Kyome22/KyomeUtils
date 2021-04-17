@@ -7,7 +7,7 @@
 
 import Foundation.NSURL
 
-func logput(_ items: Any...,
+public func logput(_ items: Any...,
             file: String = #file,
             line: Int = #line,
             function: String = #function) {

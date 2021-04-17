@@ -7,45 +7,45 @@
 
 import CoreGraphics
 
-func + (left: CGPoint, right: CGPoint) -> CGPoint {
+public func + (left: CGPoint, right: CGPoint) -> CGPoint {
     return CGPoint(x: left.x + right.x, y: left.y + right.y)
 }
 
-func += (left: inout CGPoint, right: CGPoint) {
+public func += (left: inout CGPoint, right: CGPoint) {
     left = left + right
 }
 
-func - (left: CGPoint, right: CGPoint) -> CGPoint {
+public func - (left: CGPoint, right: CGPoint) -> CGPoint {
     return CGPoint(x: left.x - right.x, y: left.y - right.y)
 }
 
-func -= (left: inout CGPoint, right: CGPoint) {
+public func -= (left: inout CGPoint, right: CGPoint) {
     left = left - right
 }
 
-func * (left: CGFloat, right: CGPoint) -> CGPoint {
+public func * (left: CGFloat, right: CGPoint) -> CGPoint {
     return CGPoint(x: left * right.x, y: left * right.y)
 }
 
-func * (left: CGPoint, right: CGFloat) -> CGPoint {
+public func * (left: CGPoint, right: CGFloat) -> CGPoint {
     return CGPoint(x: right * left.x, y: right * left.y)
 }
 
-func *= (left: inout CGPoint, right: CGFloat) {
+public func *= (left: inout CGPoint, right: CGFloat) {
     left = left * right
 }
 
-func / (left: CGPoint, right: CGFloat) -> CGPoint {
+public func / (left: CGPoint, right: CGFloat) -> CGPoint {
     precondition(right != 0, "divide by zero")
     return CGPoint(x: left.x / right, y: left.y / right)
 }
 
-func /= (left: inout CGPoint, right: CGFloat) {
+public func /= (left: inout CGPoint, right: CGFloat) {
     precondition(right != 0, "divide by zero")
     left = left / right
 }
 
-extension CGPoint {
+public extension CGPoint {
     // xとyが同じ時の初期化
     init(_ scalar: CGFloat) {
         self.init(x: scalar, y: scalar)

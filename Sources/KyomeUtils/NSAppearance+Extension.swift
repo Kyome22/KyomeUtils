@@ -7,7 +7,7 @@
 
 import AppKit
 
-extension NSAppearance {
+public extension NSAppearance {
     var isDark: Bool {
         if self.name == .vibrantDark { return true }
         guard #available(macOS 10.14, *) else { return false }
