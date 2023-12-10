@@ -1,14 +1,18 @@
-//
-//  Operations.swift
-//
-//
-//  Created by Takuto Nakamura on 2021/04/14.
-//
+/*
+ String+Extension.swift
+ KyomeUtils
 
-import AppKit
+ Created by Takuto Nakamura on 2021/04/14.
+ Copyright © 2021 Studio Kyome. All rights reserved.
+*/
+
+import Foundation
 
 public extension String {
-    var localized: String {
-        return NSLocalizedString(self, comment: self)
+    var infoString: String {
+        guard let str = Bundle.main.object(forInfoDictionaryKey: self) as? String else {
+            fatalError("infoString key is not found.")
+        }
+        return str
     }
 }
